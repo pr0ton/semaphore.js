@@ -14,16 +14,20 @@ Simple semaphore creation
 var sem = new Semaphore(3);
 ```
 
-Semaphore creation with timeout, if calling function doesn't release within timeout
+Semaphore creation with timeout, if calling function doesn't release 
+within timeout
 ```js
-/* Creates a semaphore of size 2, and if the calling function doesn't release, auto-releases in 100 ms*/
+/* Creates a semaphore of size 2, and if the calling function doesn't 
+release, auto-releases in 100 ms*/
 var sem = new Semaphore(2, 100);
 ```
 
 ### Acquiring and releasing semaphore
 
-The acquire method takes in a function that has a release method with it. The release method releases the semaphore 
-the first time it is invoked. Subsequent invocations have no effect (they do not create extra semaphore capacity. 
+The acquire method takes in a function that has a release method with it. 
+The release method releases the semaphore the first time it is invoked. 
+Subsequent invocations have no effect (they do not create extra
+semaphore capacity). 
 
 ```js
 var sem = new Semaphore(2, 100);
@@ -45,4 +49,10 @@ sem.acquire(function(release) {
       release();
   }, 1);
 });
+```
+
+Look at example.js for a demo. You can run it as
+
+```
+node example.js
 ```
