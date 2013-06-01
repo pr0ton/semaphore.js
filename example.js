@@ -1,4 +1,4 @@
-var Semaphore = require('./semaphore');
+  var Semaphore = require('./semaphore');
 /* Testing code */
 
 var s = new Semaphore(2);
@@ -9,9 +9,9 @@ function elapsedTime() {
 function getWorker(num, workTime) {
   return function(release) {
 
-    console.log("++++ " + num + "\tElapsed: " + elapsedTime());
+    console.log("+ " + num + "\tElapsed: " + elapsedTime());
     setTimeout(function() {
-      console.log("---- " + num + "\tElapsed: " + elapsedTime());
+      console.log("- " + num + "\tElapsed: " + elapsedTime());
       release();
     }, workTime);
   };
