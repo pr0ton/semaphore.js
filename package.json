@@ -1,0 +1,9 @@
+{
+    "name": "semaphore.js",
+    "description": "JavaScript asynchronous semaphore",
+    "version": "1.0.0",
+    "devDependencies": {
+    },
+    "scripts": {
+    }
+}
