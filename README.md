@@ -1,33 +1,36 @@
 semaphore.js
 ============
 
-Asynchronous semaphore for Javascript
+Asynchronous semaphore for Javascript.
 
+An asynchronous semaphore limits the number of asynchronous functions running at any given time.
 
 ## API
 
 ### Initialization
 
 Simple semaphore creation
+
 ```js
-/* Creates a semaphore of size 3*/
+/* Creates a semaphore of size 3 */
 var sem = new Semaphore(3);
 ```
 
-Semaphore creation with timeout, if calling function doesn't release 
-within timeout
+Semaphore creation with timeout, if calling function doesn't release
+within timeout.
+
 ```js
-/* Creates a semaphore of size 2, and if the calling function doesn't 
-release, auto-releases in 100 ms*/
+/* Creates a semaphore of size 2, and if the calling function doesn't
+release, auto-releases in 100 ms */
 var sem = new Semaphore(2, 100);
 ```
 
 ### Acquiring and releasing semaphore
 
-The acquire method takes in a function that has a release method with it. 
-The release method releases the semaphore the first time it is invoked. 
+The acquire method takes in a function that has a release method with it.
+The release method releases the semaphore the first time it is invoked.
 Subsequent invocations have no effect (they do not create extra
-semaphore capacity). 
+semaphore capacity).
 
 ```js
 var sem = new Semaphore(2, 100);
