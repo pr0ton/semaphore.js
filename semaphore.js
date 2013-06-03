@@ -13,7 +13,7 @@
  * This is to help with cases where something might have not released the semaphore properly
  */
 function Semaphore(totalSize, timeout) {
-  this.totalSize = parseInt(totalSize);
+  this.totalSize = parseInt(totalSize, 10);
   this.inUse = 0;
   this.queue = [];
   this.timeout = parseFloat(timeout);
