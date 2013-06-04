@@ -1,7 +1,17 @@
-semaphore.js
-============
+# semaphore.js
 
 Asynchronous semaphore for Javascript
+
+
+## Installation
+
+Install with [Bower](http://bower.io):
+
+```
+bower install --save semaphore.js
+```
+
+The component can be used as a Common JS module, an AMD module, or a global.
 
 
 ## API
@@ -14,20 +24,20 @@ Simple semaphore creation
 var sem = new Semaphore(3);
 ```
 
-Semaphore creation with timeout, if calling function doesn't release 
+Semaphore creation with timeout, if calling function doesn't release
 within timeout
 ```js
-/* Creates a semaphore of size 2, and if the calling function doesn't 
+/* Creates a semaphore of size 2, and if the calling function doesn't
 release, auto-releases in 100 ms*/
 var sem = new Semaphore(2, 100);
 ```
 
 ### Acquiring and releasing semaphore
 
-The acquire method takes in a function that has a release method with it. 
-The release method releases the semaphore the first time it is invoked. 
+The acquire method takes in a function that has a release method with it.
+The release method releases the semaphore the first time it is invoked.
 Subsequent invocations have no effect (they do not create extra
-semaphore capacity). 
+semaphore capacity).
 
 ```js
 var sem = new Semaphore(2, 100);
