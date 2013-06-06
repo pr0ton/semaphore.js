@@ -1,27 +1,34 @@
-semaphore.js
-============
+# semaphore.js
 
-Asynchronous semaphore for Javascript.
+Asynchronous semaphore for Javascript
 
-An asynchronous semaphore limits the number of asynchronous functions running at any given time.
+
+## Installation
+
+Install with [Bower](http://bower.io):
+
+```
+bower install --save semaphore.js
+```
+
+The component can be used as a Common JS module, an AMD module, or a global.
+
 
 ## API
 
 ### Initialization
 
 Simple semaphore creation
-
 ```js
-/* Creates a semaphore of size 3 */
+/* Creates a semaphore of size 3*/
 var sem = new Semaphore(3);
 ```
 
 Semaphore creation with timeout, if calling function doesn't release
-within timeout.
-
+within timeout
 ```js
 /* Creates a semaphore of size 2, and if the calling function doesn't
-release, auto-releases in 100 ms */
+release, auto-releases in 100 ms*/
 var sem = new Semaphore(2, 100);
 ```
 
