@@ -21,16 +21,18 @@ An asynchronous semaphore limits the number of asynchronous functions running at
 ### Initialization
 
 Simple semaphore creation
+
 ```js
-/* Creates a semaphore of size 3*/
+/* Creates a semaphore of size 3 */
 var sem = new Semaphore(3);
 ```
 
 Semaphore creation with timeout, if calling function doesn't release
 within timeout
+
 ```js
 /* Creates a semaphore of size 2, and if the calling function doesn't
-release, auto-releases in 100 ms*/
+release, auto-releases in 100 ms */
 var sem = new Semaphore(2, 100);
 ```
 
@@ -48,17 +50,17 @@ sem.acquire(function(release) {
   // release after 50 ms
   console.log("first callback acquiring");
   setTimeout(function() {
-      console.log("first callback releasing");
-      release();
-      release(); // only the first invocation matters
+    console.log("first callback releasing");
+    release();
+    release(); // only the first invocation matters
   }, 150);
 });
 
 sem.acquire(function(release) {
   console.log("first callback acquiring");
   setTimeout(function() {
-      console.log("first callback releasing");
-      release();
+    console.log("first callback releasing");
+    release();
   }, 1);
 });
 ```
@@ -70,7 +72,18 @@ node example.js
 ```
 
 
-Run tests with mocha. Install via npm and run as follows
+## Testing
+
+Install Node (which comes with npm).
+
+Install the development dependencies:
+
 ```
-mocha
+npm install
+```
+
+Run the tests:
+
+```
+npm test
 ```
