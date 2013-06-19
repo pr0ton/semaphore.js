@@ -51,7 +51,7 @@ describe('Semaphore', function(){
       release(i);
     });
     it ('should get into deadlock', function() {
-      /* Deadlock happens because 1 and 2 trigger their releaser before it's actually registered */
+      /* Deadlock happens because 1 triggers their releaser before it's actually acquired and registered */
       assert.deepEqual(q, ["a0","r0","a1"]);
     });
   });
