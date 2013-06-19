@@ -89,4 +89,4 @@ npm test
 ```
 
 
-"!https://travis-ci.org/pr0ton/semaphore.js.png!":https://travis-ci.org/pr0ton/semaphore.js
+[![Build Status](https://travis-ci.org/pr0ton/semaphore.js.png)](https://travis-ci.org/pr0ton/semaphore.js)
