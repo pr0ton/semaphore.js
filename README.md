@@ -66,3 +66,9 @@ Look at example.js for a demo. You can run it as
 ```
 node example.js
 ```
+
+
+Run tests with mocha. Install via npm and run as follows
+```
+mocha
+```
