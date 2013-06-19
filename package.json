@@ -3,7 +3,9 @@
     "description": "JavaScript asynchronous semaphore",
     "version": "1.0.0",
     "devDependencies": {
+        "mocha": "*"
     },
     "scripts": {
+        "test": "mocha --no-colors --reporter spec"
     }
 }
