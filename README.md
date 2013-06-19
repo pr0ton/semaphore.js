@@ -13,6 +13,8 @@ bower install --save semaphore.js
 
 The component can be used as a Common JS module, an AMD module, or a global.
 
+An asynchronous semaphore limits the number of asynchronous functions running at any given time.
+
 
 ## API
 
