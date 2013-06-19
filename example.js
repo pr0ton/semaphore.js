@@ -1,11 +1,13 @@
-  var Semaphore = require('./semaphore');
+var Semaphore = require('./semaphore');
 /* Testing code */
 
 var s = new Semaphore(2);
 var startTime = new Date().getTime();
+
 function elapsedTime() {
-  return (new Date().getTime() - startTime) / 1000. + " seconds";
+  return (new Date().getTime() - startTime) / 1000 + " seconds";
 }
+
 function getWorker(num, workTime) {
   return function(release) {
 
