@@ -65,10 +65,10 @@ sem.acquire(function(release) {
 });
 ```
 
-Look at example.js for a demo. You can run it as
+Look at `example/example.js` for a demo. You can run it as
 
 ```
-node example.js
+node example/example.js
 ```
 
 
