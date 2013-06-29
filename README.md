@@ -1,9 +1,16 @@
 # semaphore.js
 
-Asynchronous semaphore for Javascript
+[![Build Status](https://travis-ci.org/pr0ton/semaphore.js.png?branch=master)](https://travis-ci.org/pr0ton/semaphore.js)
+
+Asynchronous semaphore for Javascript.
+
+An asynchronous semaphore limits the number of asynchronous functions running
+at any given time.
 
 
 ## Installation
+
+The component can be used as a Common JS module, an AMD module, or a global.
 
 Install with [Bower](http://bower.io):
 
@@ -11,9 +18,11 @@ Install with [Bower](http://bower.io):
 bower install --save semaphore.js
 ```
 
-The component can be used as a Common JS module, an AMD module, or a global.
+Install with npm:
 
-An asynchronous semaphore limits the number of asynchronous functions running at any given time.
+```
+npm install --save semaphore.js
+```
 
 
 ## API
@@ -87,6 +96,3 @@ Run the tests:
 ```
 npm test
 ```
-
-
-[![Build Status](https://travis-ci.org/pr0ton/semaphore.js.png)](https://travis-ci.org/pr0ton/semaphore.js)
